@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-size: 15px;
+  background-color: hsl(216, 12%, 8%);
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Overpass", sans-serif;
+}
+
+h1 {
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.container {
+  width: 300px;
+  padding: 20px;
+  color: hsl(217, 12%, 63%);
+  background-color: hsl(213, 19%, 18%);
+  border-radius: 10px;
+}
+.container .ask-rate {
+  text-align: left;
+}
+.container .ask-rate .star-container {
+  margin-bottom: 20px;
+}
+.container .ask-rate .star-container .star-holder {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 10px;
+  background-color: hsla(217, 12%, 63%, 0.158);
+  border-radius: 50%;
+}
+.container .ask-rate .ask-text {
+  margin-bottom: 20px;
+}
+.container .ask-rate .rating {
+  display: flex;
+  justify-content: space-between;
+}
+.container .ask-rate .rating .rate {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: hsl(216, 12%, 54%);
+  background-color: hsla(218, 12%, 62%, 0.22);
+  border-radius: 50%;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.container .ask-rate .rating .rate:hover {
+  background-color: hsl(25, 97%, 53%);
+}
+.container .ask-rate .button-holder {
+  display: flex;
+}
+.container .ask-rate .button-holder .submit-btn {
+  width: 100%;
+  border-radius: 50px;
+  background-color: hsl(25, 97%, 53%);
+  letter-spacing: 5px;
+  border: none;
+  padding: 15px 0;
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+  cursor: pointer;
+}
+.container .ask-rate .button-holder .submit-btn:hover {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(25, 97%, 53%);
+}
+
+.thank {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    border-radius: 20px;
+  }
+}

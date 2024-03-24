@@ -1,0 +1,103 @@
+body {
+    min-height: 100vh;
+    font-size: 15px;
+    background-color: $Very-Dark-Blue;
+    font-weight: $font-normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: $primary-font;
+}
+
+h1 {
+    color: $White;
+    font-weight: $font-bold;
+    margin-bottom: 10px;
+}
+
+.container {
+    width: 300px;
+    padding: 20px;
+    color: $Light-Grey;
+    background-color: $Dark-Blue;
+    border-radius: 10px;
+    .ask-rate {
+        text-align: left;
+        .star-container {
+            margin-bottom: 20px;
+            .star-holder {
+                width: $circle-size;
+                height: $circle-size;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 5px 10px;
+                background-color: $star-bg;
+                border-radius: 50%;
+            }
+        }
+
+        .ask-text {
+            margin-bottom: 20px;
+        }
+    
+        .rating {
+            display: flex;
+            justify-content: space-between;
+    
+            .rate {
+                width: $circle-size;
+                height: $circle-size;
+                margin-bottom: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: $Medium-Grey;
+                background-color: $rate-bg;
+                border-radius: 50%;
+                border: none;
+                font-size: 1rem;
+                cursor: pointer;
+            }
+
+            .rate:hover {
+                background-color: $Orange;
+            }
+        }
+
+        .button-holder {
+            display: flex;
+            .submit-btn {
+                width: 100%;
+                border-radius: 50px;
+                background-color: $Orange;
+                letter-spacing: 5px;
+                border: none;
+                padding: 15px 0;
+                color: $White;
+                font-weight: $font-bold;
+                cursor: pointer;
+            }
+
+            .submit-btn:hover {
+                background-color: $White;
+                color: $Orange;
+            }
+
+
+        }
+        
+        
+    
+    }
+}
+
+.thank {
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        border-radius: 20px;
+    }
+}
