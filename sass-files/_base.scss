@@ -9,7 +9,7 @@ body {
     font-family: $primary-font;
 }
 
-h1 {
+h1, h2 {
     color: $White;
     font-weight: $font-bold;
     margin-bottom: 10px;
@@ -17,12 +17,15 @@ h1 {
 
 .container {
     width: 300px;
-    padding: 20px;
+    // padding: 20px;
     color: $Light-Grey;
     background-color: $Dark-Blue;
     border-radius: 10px;
     .ask-rate {
+        display: none;
         text-align: left;
+        padding: 20px;
+        transition: all ease-in-out 1s;
         .star-container {
             margin-bottom: 20px;
             .star-holder {
@@ -61,7 +64,14 @@ h1 {
             }
 
             .rate:hover {
+                background-color: $rate-hover;
+                color: $White;
+            }
+
+            .active {
                 background-color: $Orange;
+                color: $White;
+                font-weight: $font-bold;
             }
         }
 
@@ -85,19 +95,94 @@ h1 {
             }
 
 
-        }
-        
-        
+        }      
     
     }
-}
+    
+    .thank {
+        display: none;
+        text-align: center;
+        padding: 40px 10px;
+        font-size: 14px;
 
-.thank {
-    display: none;
+        .submitted-rating {
+            border-radius: 50px;
+            display: inline-block;
+            background-color: $star-bg;    
+            padding: 7px 15px 5px 15px;
+            margin: 20px 0;
+            color: $Orange;
+        }
+    }
+
+    .active-animation {
+        display: block;
+        animation: fade-in 1s ease-in-out;
+    }
+    
+    .inactive {
+        opacity: 1;
+        display: none;
+    }
+
 }
 
 @media screen and (min-width: 768px) {
     .container {
+        width: 420px;
         border-radius: 20px;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        .ask-rate {
+            padding: 40px;
+            .star-container {
+                margin-bottom: 30px;
+            }
+            
+            .ask-text {
+                margin-bottom: 30px;
+                h1 {
+                    margin-bottom: 30px;
+                } 
+            }
+
+            .rating {
+                margin-bottom: 20px;
+                .rate{
+                    width: 50px;
+                    height: 50px;
+                    font-size: 1.2rem;
+                }
+            }
+            .button-holder {
+                .submit-btn {
+                    font-size: 1.1rem;
+                }
+            }
+            
+        }    
+
+        .thank {
+            padding: 40px 30px;
+            h2 {
+                font-size: 2rem;
+            }
+    
+            .thank-message {
+                font-size: 1rem;
+            }
+        }
     }
+    
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
 }

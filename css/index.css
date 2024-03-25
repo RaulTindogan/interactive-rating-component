@@ -16,7 +16,7 @@ body {
   font-family: "Overpass", sans-serif;
 }
 
-h1 {
+h1, h2 {
   color: hsl(0, 0%, 100%);
   font-weight: 700;
   margin-bottom: 10px;
@@ -24,13 +24,15 @@ h1 {
 
 .container {
   width: 300px;
-  padding: 20px;
   color: hsl(217, 12%, 63%);
   background-color: hsl(213, 19%, 18%);
   border-radius: 10px;
 }
 .container .ask-rate {
+  display: none;
   text-align: left;
+  padding: 20px;
+  transition: all ease-in-out 1s;
 }
 .container .ask-rate .star-container {
   margin-bottom: 20px;
@@ -67,7 +69,13 @@ h1 {
   cursor: pointer;
 }
 .container .ask-rate .rating .rate:hover {
+  background-color: hsla(220, 26%, 93%, 0.618);
+  color: hsl(0, 0%, 100%);
+}
+.container .ask-rate .rating .active {
   background-color: hsl(25, 97%, 53%);
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
 }
 .container .ask-rate .button-holder {
   display: flex;
@@ -87,13 +95,74 @@ h1 {
   background-color: hsl(0, 0%, 100%);
   color: hsl(25, 97%, 53%);
 }
-
-.thank {
+.container .thank {
+  display: none;
+  text-align: center;
+  padding: 40px 10px;
+  font-size: 14px;
+}
+.container .thank .submitted-rating {
+  border-radius: 50px;
+  display: inline-block;
+  background-color: hsla(217, 12%, 63%, 0.158);
+  padding: 7px 15px 5px 15px;
+  margin: 20px 0;
+  color: hsl(25, 97%, 53%);
+}
+.container .active-animation {
+  display: block;
+  animation: fade-in 1s ease-in-out;
+}
+.container .inactive {
+  opacity: 1;
   display: none;
 }
 
 @media screen and (min-width: 768px) {
   .container {
+    width: 420px;
     border-radius: 20px;
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  .container .ask-rate {
+    padding: 40px;
+  }
+  .container .ask-rate .star-container {
+    margin-bottom: 30px;
+  }
+  .container .ask-rate .ask-text {
+    margin-bottom: 30px;
+  }
+  .container .ask-rate .ask-text h1 {
+    margin-bottom: 30px;
+  }
+  .container .ask-rate .rating {
+    margin-bottom: 20px;
+  }
+  .container .ask-rate .rating .rate {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+  }
+  .container .ask-rate .button-holder .submit-btn {
+    font-size: 1.1rem;
+  }
+  .container .thank {
+    padding: 40px 30px;
+  }
+  .container .thank h2 {
+    font-size: 2rem;
+  }
+  .container .thank .thank-message {
+    font-size: 1rem;
+  }
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
